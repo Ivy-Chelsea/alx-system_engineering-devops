@@ -1,1 +1,1 @@
-absolute oath name
+absolute path name
