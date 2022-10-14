@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-OUNTER=1
+COUNTER=1
 while [ $COUNTER -lt 21 ]
 do
     case $COUNTER in
