@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays content of current directory in a list format
 
 for i in *
 do
