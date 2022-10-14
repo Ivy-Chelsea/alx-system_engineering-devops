@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Display 1 to 20 with exceptions in 4th 9th and 17th loop
 
 COUNTER=1
 while [ $COUNTER -lt 21 ]
