@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays Best School from 1 to 10 with exceptions at 4th & 8th loop
 
 COUNTER=1
 while [ $COUNTER -lt 11 ]
