@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Gives description about the school file
 
 FILE="school"
 
