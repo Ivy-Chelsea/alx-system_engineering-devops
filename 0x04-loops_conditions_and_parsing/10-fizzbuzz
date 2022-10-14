@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays 1-100 with exceptions in multiples of 3,5 or both
 
 COUNTER=1
 while [ $COUNTER -lt 101 ]
