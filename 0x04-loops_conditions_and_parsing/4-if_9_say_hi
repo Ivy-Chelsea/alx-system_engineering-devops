@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
-#displays hi on the 9thh line
+# displays hi on the 9thh line
 
 COUNTER=0
-while [ $COUNTER -lt 11 ]
+while [ $COUNTER -lt 10 ]
 do
 	if [ $COUNTER = 9 ]
 	then
 		echo "Hi"
-	else
-		echo "Best School"
 	fi
-	let COUNTER+=1
+	echo "Best School"
+	(( COUNTER++ ))
 done
