@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Displays Best School from 1 to 10 with exceptions at 4th & 8th loop
 
-COUNTER=1
+COUNTER=0
 while [ $COUNTER -lt 10 ]
 do
-	if [ $COUNTER = 3 ]
+	if [ $COUNTER = 4 ]
 	then
 		echo "bad luck"
-	elif [ $COUNTER = 7 ]
+	elif [ $COUNTER = 8 ]
 	then
 		echo "good luck"
 	else
