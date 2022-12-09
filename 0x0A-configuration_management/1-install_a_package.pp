@@ -1,5 +1,5 @@
-#install puppet-lint
-package {'puppet-lint':
+#install puppet-flask
+package {'puppet-flask':
     ensure   =>'2.1.0',
-    provider =>'gem',
+    provider =>'pip3',
     }
