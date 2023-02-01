@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"""recusive function that returns hot title of a subreddit"""
+"""function that returns hot title of a subreddit"""
 import json
 import requests
 
 
-def recurse(subreddit, hot_list=[], after=None, ugly_flag=0]:
-    """function that queries reddit api and returns list of hot titles"""
+def recurse(subreddit, hot_list=[], after=None, ugly_flag=0):
+    """recursive function to return hot titles"""
     user_agent = {"User-Agent": "unix:0-subs.py:v1.0"}
     if after is None:
         if ugly_flag == 1:
@@ -19,17 +19,17 @@ def recurse(subreddit, hot_list=[], after=None, ugly_flag=0]:
         else:
             json_data = data.json().get("data").get("children", [])
             for post in json_data:
-                hot_list.append(post.get("data").get("after")
+                hot_list.append(post.get("data").get("title"))
             ugly_flag = 1
             after = data.json().get("data").get("after")
             return recurse(subreddit, hot_list, after, ugly_flag)
-        else:
-            data = requests.get("https://www.reddit.com/r/{}/hot/.json?after={}"
-                                .format(subreddit, after),
-                                headers=user_agent,
-                                allow_redirects=False)
-            json_data = data.json().get("data").get("children", [])
-            for post in json_data:
-                    hot_list.append(post.get("data").get("title"))
-            after = data.json().get("data").get("after")
-            return recurse(subredit, hot_list, after, ugly_glag)
+    else:
+        data = requests.get("https://www.reddit.com/r/{}/hot/.json?after={}"
+                            .format(subreddit, after),
+                            headers=user_agent,
+                            allow_redirects=False)
+        json_data = data.json().get("data").get("children", [])
+        for post in json_data:
+                hot_list.append(post.get("data").get("title"))
+        after = data.json().get("data").get("after")
+        return recurse(subreddit, hot_list, after, ugly_flag)
