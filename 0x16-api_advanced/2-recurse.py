@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+"""recusive function that returns hot title of a subreddit"""
 import json
 import requests
 
 
 def recurse(subreddit, hot_list=[], after=None, ugly_flag=0]:
+    """function that queries reddit api and returns list of hot titles"""
     user_agent = {"User-Agent": "unix:0-subs.py:v1.0"}
     if after is None:
         if ugly_flag == 1:
